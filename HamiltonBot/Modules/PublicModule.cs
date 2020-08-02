@@ -72,6 +72,8 @@ namespace HamiltonBot.Modules
                     string embedFieldText = string.Empty;
                     foreach (var module in modules)
                     {
+                        if (module.Commands.Count == 0) { continue; }
+
                         foreach (var command in module.Commands)
                         {
                             embedFieldText += $"{command.Name}, ";
